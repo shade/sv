@@ -37,10 +37,6 @@ html(lang="en")
 				div(class="collapse navbar-collapse", id="navbarNav")
 					if (client)
 						ul(class="navbar-nav mr-auto")
-							li(class="nav-item")
-								a(href="/about", class="nav-link")
-									span About
-
 							if (config.siteTools)
 								li(class="nav-item dropdown")
 									a(class="nav-link dropdown-toggle", href="javascript:void(0)", role="button", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false") 
@@ -119,30 +115,9 @@ html(lang="en")
 							dl
 								dt Source
 								dd
+									| modified version of:
+									br
 									a(href="https://github.com/janoside/btc-rpc-explorer") github.com/janoside/btc-rpc-explorer
-
-								dt Running Version
-								dd
-									a(href=("https://github.com/janoside/btc-rpc-explorer/commit/" + sourcecodeVersion)) #{sourcecodeVersion}
-									span(style="color: #ccc;")  (#{sourcecodeDate})
-
-								if (config.demoSite)
-									dt Public Demos
-									dd
-										if (coinConfig.demoSiteUrl)
-											a(href=coinConfig.demoSiteUrl) #{coinConfig.demoSiteUrl}
-										else
-											a(href="https://btc-explorer.chaintools.io") https://btc-explorer.chaintools.io
-										
-										div(class="mt-2")
-											- var demoSiteCoins = ["BTC", "LTC"];
-											each demoSiteCoin in demoSiteCoins
-												a(href=coinConfigs[demoSiteCoin].demoSiteUrl, class="mr-2", title=coinConfigs[demoSiteCoin].siteTitle)
-													img(src=("/img/logo/" + demoSiteCoin.toLowerCase() + ".svg"), alt=demoSiteCoin.toLowerCase())
-
-											a(href="https://lightning.chaintools.io", class="mr-2", title="Lightning Explorer")
-												img(src=("/img/logo/lightning.svg"), style="width: 32px; height: 32px;", alt="lightning")
-
 						div(class="col-md-7 text-md-right")
 							dl
 								dt Support Development of #{coinConfig.siteTitle}

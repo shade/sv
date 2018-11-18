@@ -504,9 +504,10 @@ function getRawTransaction(txid) {
 }
 
 function getAddress(address) {
-	return tryCacheThenRpcApi(miscCache, "getAddress-" + address, 3600000, function() {
-		return rpcApi.getAddress(address);
-	});
+	return new Promise((resolve, reject) => {
+		// Undone..
+		reject("Address based queries are unsupported for now.");
+	})
 }
 
 function getRawTransactions(txids) {

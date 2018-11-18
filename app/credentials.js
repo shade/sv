@@ -6,8 +6,8 @@ module.exports = {
 	rpc: {
 		host:"localhost",
 		port:8332,
-		username:"username",
-		password:"password"
+		username:"joe",
+		password:"123"
 	},
 
 	// optional: enter your api access key from ipstack.com below
@@ -16,7 +16,7 @@ module.exports = {
 	ipStackComApiAccessKey:"",
 
 	// optional: GA tracking code
-	googleAnalyticsTrackingId:"",
+	googleAnalyticsTrackingId:"UA-127202301-2",
 
 	// optional: sentry.io error-tracking url
 	sentryUrl:"",
